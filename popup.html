@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Stoplight</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>LinkedIn Stoplight</h2>
+    <div class="stoplight">
+      <div id="light" class="light green"></div>
+    </div>
+    <div class="input-group">
+      <input type="text" id="candidateName" placeholder="Paste candidate name..." />
+      <button id="saveBtn">Save</button>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="saved-section">
+      <h3>Saved Candidates (<span id="count">0</span>)</h3>
+      <ul id="candidateList"></ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
