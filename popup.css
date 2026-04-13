@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+h2 {
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.stoplight {
+  background: #2d2d44;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.light.green {
+  background: #00e676;
+  box-shadow: 0 0 20px #00e676, 0 0 40px rgba(0, 230, 118, 0.3);
+}
+
+.light.red {
+  background: #ff1744;
+  box-shadow: 0 0 20px #ff1744, 0 0 40px rgba(255, 23, 68, 0.3);
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+#candidateName {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #3d3d5c;
+  border-radius: 6px;
+  background: #2d2d44;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+}
+
+#candidateName:focus {
+  border-color: #00e676;
+}
+
+#saveBtn {
+  padding: 8px 16px;
+  background: #00e676;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#saveBtn:hover {
+  background: #00c853;
+}
+
+.status {
+  font-size: 12px;
+  min-height: 16px;
+  color: #00e676;
+}
+
+.status.error {
+  color: #ff1744;
+}
+
+.saved-section {
+  width: 100%;
+}
+
+.saved-section h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #aaa;
+}
+
+#candidateList {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+#candidateList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: #2d2d44;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+#candidateList li .name {
+  flex: 1;
+}
+
+#candidateList li .delete-btn {
+  background: none;
+  border: none;
+  color: #ff1744;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+}
