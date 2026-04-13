@@ -1,0 +1,51 @@
+.li-stoplight-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+
+.li-stoplight-banner.green {
+  background: linear-gradient(135deg, #0a2e0a, #1a4a1a);
+  color: #00e676;
+  border-bottom: 2px solid #00e676;
+}
+
+.li-stoplight-banner.red {
+  background: linear-gradient(135deg, #2e0a0a, #4a1a1a);
+  color: #ff1744;
+  border-bottom: 2px solid #ff1744;
+}
+
+.li-stoplight-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.li-stoplight-dot.green {
+  background: #00e676;
+  box-shadow: 0 0 8px #00e676;
+}
+
+.li-stoplight-dot.red {
+  background: #ff1744;
+  box-shadow: 0 0 8px #ff1744;
+  animation: pulse-red 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 8px #ff1744; }
+  50% { box-shadow: 0 0 20px #ff1744, 0 0 30px rgba(255, 23, 68, 0.4); }
+}
