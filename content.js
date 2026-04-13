@@ -56,6 +56,9 @@
       const name = getProfileName();
       sendResponse({ name: name });
     }
+        if (request.action === 'recheckCandidate') {
+      checkCandidate();
+    }
     return true;
   });
 
